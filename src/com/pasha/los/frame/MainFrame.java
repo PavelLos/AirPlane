@@ -12,13 +12,12 @@ public class MainFrame {
     private JFrame frame;
     private AirModel airModel;
 
-    public MainFrame() {
+    public MainFrame(JFrame _frame) {
+        frame = _frame;
         frame = new JFrame("PlaneWar");
-        frame.setSize(new Dimension(AirModel.HEIGHT_SIZE, AirModel.WIDTH_SIZE));
-        frame.setResizable(false);
-        frame.setVisible(true);
+
         airModel = new AirModel();
-        frame.add(airModel.getAirModelImage(), BorderLayout.CENTER);
+        frame.add(airModel);
 
     }
 }
