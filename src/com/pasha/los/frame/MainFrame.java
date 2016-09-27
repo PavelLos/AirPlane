@@ -1,6 +1,7 @@
 package com.pasha.los.frame;
 
-import com.pasha.los.air.road.AirModel;
+import com.pasha.los.GameConstants;
+import com.pasha.los.air.road.AirGameField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,14 +11,16 @@ import java.awt.*;
  */
 public class MainFrame {
     private JFrame frame;
-    private AirModel airModel;
+    private AirGameField airGameField;
 
     public MainFrame(JFrame _frame) {
         frame = _frame;
         frame = new JFrame("PlaneWar");
-
-        airModel = new AirModel();
-        frame.add(airModel);
-
+        frame.setSize(new Dimension(GameConstants.WIDTH_SIZE, GameConstants.HEIGHT_SIZE));
+        airGameField = new AirGameField();
+        frame.add(airGameField, BorderLayout.CENTER);
+        //frame.setResizable(false);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
