@@ -16,8 +16,6 @@ public class AirPlaneModel {
     private int distancePlane;
 
 
-
-
     public AirPlaneModel() {
         planeImage = Toolkit.getDefaultToolkit().getImage("images\\airplanesmall.png");
         speedOfAirPlane = 5;
@@ -49,7 +47,8 @@ public class AirPlaneModel {
     }
 
     public void setxAirPlane(int xAirPlane) {
-        this.xAirPlane = xAirPlane;
+        if (xAirPlane > 0 && xAirPlane < 590)
+            this.xAirPlane = xAirPlane;
     }
 
     public int getyAirPlane() {

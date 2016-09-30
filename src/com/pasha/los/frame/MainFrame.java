@@ -18,7 +18,7 @@ public class MainFrame {
         frame = new JFrame("PlaneWar");
         frame.setSize(new Dimension(GameConstants.WIDTH_SIZE, GameConstants.HEIGHT_SIZE));
         airGameField = new AirGameField();
-        frame.add(airGameField, BorderLayout.CENTER);
+        frame.add(airGameField);
         //frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
